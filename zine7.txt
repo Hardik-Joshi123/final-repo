@@ -1,0 +1,27 @@
+root@kali:~# nmap -T4 -v -PN -n -sS --top-ports 100 -- max-parallelism 10 -oA nmapSYN 10.0.2.15
+
+
+
+Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower.
+Warning: The -PN option is deprecated. Please use -Pn
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-01-29 10:54 EST
+Failed to resolve "max-parallelism".
+Failed to resolve "-oA".
+Failed to resolve "nmapSYN".
+Initiating SYN Stealth Scan at 10:54
+Scanning 2 hosts [100 ports/host]
+Completed SYN Stealth Scan against 0.0.0.10 in 21.08s (1 host left)
+Completed SYN Stealth Scan at 10:54, 21.08s elapsed (200 total ports)
+Nmap scan report for 10 (0.0.0.10)
+Host is up.
+All 100 scanned ports on 10 (0.0.0.10) are in ignored states.
+Not shown: 100 filtered tcp ports (no-response)
+
+Nmap scan report for 10.0.2.15
+Host is up.
+All 100 scanned ports on 10.0.2.15 are in ignored states.
+Not shown: 100 filtered tcp ports (no-response)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 2 IP addresses (2 hosts up) scanned in 26.49 seconds
+           Raw packets sent: 400 (17.600KB) | Rcvd: 0 (0B)
