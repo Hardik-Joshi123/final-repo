@@ -1,5 +1,5 @@
 root@kali:~# sudo nmap -sS 10.0.2.15 
-
+ 
 
 Starting Nmap 7.92 ( https://nmap.org ) at 2024-01-29 09:55 EST
 Nmap scan report for 10.0.2.15
