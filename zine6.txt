@@ -1,0 +1,17 @@
+root@kali:~# sudo nmap -A 10.0.2.15
+
+
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-01-29 10:02 EST
+Nmap scan report for 10.0.2.15
+Host is up (0.0011s latency).
+All 1000 scanned ports on 10.0.2.15 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+Too many fingerprints match this host to give specific OS details
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 21.10 seconds
