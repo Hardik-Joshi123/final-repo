@@ -1,0 +1,21 @@
+root@kali:~# nmap --mtu 80 -vv 10.0.2.15
+
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-01-30 14:19 EST
+Initiating Ping Scan at 14:19
+Scanning 10.0.2.15 [4 ports]
+Completed Ping Scan at 14:19, 0.03s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:19
+Completed Parallel DNS resolution of 1 host. at 14:19, 0.07s elapsed
+Initiating SYN Stealth Scan at 14:19
+Scanning 10.0.2.15 [1000 ports]
+Completed SYN Stealth Scan at 14:19, 4.12s elapsed (1000 total ports)
+Nmap scan report for 10.0.2.15
+Host is up, received reset ttl 128 (0.0010s latency).
+Scanned at 2024-01-30 14:19:40 EST for 4s
+All 1000 scanned ports on 10.0.2.15 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 4.36 seconds
+           Raw packets sent: 2007 (88.272KB) | Rcvd: 3 (120B)
