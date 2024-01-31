@@ -1,0 +1,67 @@
+finally completed stage 1
+commands:
+sudo netdiscover -r 10.0.2.15
+
+result
+3 Captured ARP Req/Rep packets, from 3 hosts.   Total size: 180                                                                                                                                                                           
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 10.0.2.2        52:54:00:12:35:02      1      60  Unknown vendor                                                                                                                                                                          
+ 10.0.2.3        52:54:00:12:35:03      1      60  Unknown vendor                                                                                                                                                                          
+ 10.0.2.4        52:54:00:12:35:04      1      60  Unknown vendor   
+
+
+
+
+
+
+
+[next command was to check each ip for open port]
+for 10.0.2.4
+
+└─$ nmap -Pn 10.0.2.4 
+Starting Nmap 7.94 ( https://nmap.org ) at 2024-01-31 14:38 EST
+Nmap scan report for 10.0.2.4
+Host is up (0.010s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+135/tcp open  msrpc
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+912/tcp open  apex-mesh
+
+
+
+for 10.0.2.2
+
+└─$ nmap -Pn 10.0.2.2
+Starting Nmap 7.94 ( https://nmap.org ) at 2024-01-31 14:54 EST
+Nmap scan report for 10.0.2.2
+Host is up (0.011s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+135/tcp open  msrpc
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+912/tcp open  apex-mesh
+
+Nmap done: 1 IP address (1 host up) scanned in 5.95 seconds
+
+
+
+
+for 10.0.2.3
+
+└─$ nmap -Pn 10.0.2.3
+Starting Nmap 7.94 ( https://nmap.org ) at 2024-01-31 14:55 EST
+Nmap scan report for 10.0.2.3
+Host is up (0.011s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+135/tcp open  msrpc
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+912/tcp open  apex-mesh
+
+Nmap done: 1 IP address (1 host up) scanned in 7.04 seconds
