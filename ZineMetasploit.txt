@@ -1,0 +1,45 @@
+                    
+┌──(kali㉿kali)-[~]
+└─$ msfconsole
+                                                  
+ _                                                    _
+/ \    /\         __                         _   __  /_/ __                                                                                                  
+| |\  / | _____   \ \           ___   _____ | | /  \ _   \ \                                                                                                 
+| | \/| | | ___\ |- -|   /\    / __\ | -__/ | || | || | |- -|                                                                                                
+|_|   | | | _|__  | |_  / -\ __\ \   | |    | | \__/| |  | |_                                                                                                
+      |/  |____/  \___\/ /\ \\___/   \/     \__|    |_\  \___\                                                                                               
+                                                                                                                                                             
+
+       =[ metasploit v6.3.27-dev                          ]
++ -- --=[ 2335 exploits - 1220 auxiliary - 413 post       ]
++ -- --=[ 1382 payloads - 46 encoders - 11 nops           ]
++ -- --=[ 9 evasion                                       ]
+
+Metasploit tip: Start commands with a space to avoid saving 
+them to history
+Metasploit Documentation: https://docs.metasploit.com/
+
+msf6 > search Microsoft Windows RPC
+
+Matching Modules
+================
+
+   #   Name                                                  Disclosure Date  Rank       Check  Description
+   -   ----                                                  ---------------  ----       -----  -----------
+   0   exploit/windows/local/cve_2020_17136                  2020-03-10       normal     Yes    CVE-2020-1170 Cloud Filter Arbitrary File Creation EOP
+   1   exploit/windows/dcerpc/ms03_026_dcom                  2003-07-16       great      Yes    MS03-026 Microsoft RPC DCOM Interface Overflow
+   2   exploit/windows/smb/ms04_011_lsass                    2004-04-13       good       No     MS04-011 Microsoft LSASS Service DsRolerUpgradeDownlevelServer Overflow
+   3   exploit/windows/dcerpc/ms05_017_msmq                  2005-04-12       good       No     MS05-017 Microsoft Message Queueing Service Path Overflow
+   4   exploit/windows/smb/ms06_040_netapi                   2006-08-08       good       No     MS06-040 Microsoft Server Service NetpwPathCanonicalize Overflow
+   5   exploit/windows/smb/ms07_029_msdns_zonename           2007-04-12       manual     No     MS07-029 Microsoft DNS RPC Service extractQuotedChar() Overflow (SMB)
+   6   exploit/windows/dcerpc/ms07_029_msdns_zonename        2007-04-12       great      No     MS07-029 Microsoft DNS RPC Service extractQuotedChar() Overflow (TCP)
+   7   exploit/windows/dcerpc/ms07_065_msmq                  2007-12-11       good       No     MS07-065 Microsoft Message Queueing Service DNS Name Path Overflow
+   8   exploit/windows/smb/ms08_067_netapi                   2008-10-28       great      Yes    MS08-067 Microsoft Server Service Relative Path Stack Corruption
+   9   exploit/windows/smb/ms10_061_spoolss                  2010-09-14       excellent  No     MS10-061 Microsoft Print Spooler Service Impersonation Vulnerability
+   10  exploit/windows/local/alpc_taskscheduler              2018-08-27       normal     No     Microsoft Windows ALPC Task Scheduler Local Privilege Elevation
+   11  auxiliary/gather/windows_deployment_services_shares                    normal     No     Microsoft Windows Deployment Services Unattend Gatherer
+   12  auxiliary/scanner/dcerpc/windows_deployment_services                   normal     No     Microsoft Windows Deployment Services Unattend Retrieval
+   13  exploit/windows/smb/smb_rras_erraticgopher            2017-06-13       average    Yes    Microsoft Windows RRAS Service MIBEntryGet Overflow
+   14  auxiliary/scanner/dcerpc/petitpotam                                    normal     No     PetitPotam
+   15  auxiliary/scanner/smb/smb_enumusers_domain                             normal     No     SMB Domain User Enumeration
+
